@@ -1,0 +1,17 @@
+.my-footer {
+    background: $white;
+    color: $blue;
+    position: relative;
+
+    span {
+        cursor: pointer;
+
+        &:hover {
+            color: $light-blue;
+        }
+    }
+
+    .year {
+        font-size: small;
+    }
+}

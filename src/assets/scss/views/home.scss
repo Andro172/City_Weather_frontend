@@ -1,0 +1,75 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+  
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+  
+@include keyframes(fade-in) {
+    0% { opacity: 0; }
+    90% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@include keyframes (pulse) {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.home {
+    background: $blue;
+    background: -moz-linear-gradient($top-left, $blue, $light-blue); /* FF3.6-15 */
+    background: -webkit-linear-gradient($top-left, $blue, $light-blue); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient($top-left, $blue, $light-blue); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    min-height: 100vh;
+}
+
+.tile {
+    border-radius: .5rem;
+    padding: 1rem;
+    color: $blue;
+    background: $white;
+    @include animation('pulse .5s ease-in');
+    box-shadow: 4px 4px 6px rgba($color: black, $alpha: .3);
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.remove-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 2rem;
+    height: 1rem;
+    background-color: $blue;
+    @include animation('fade-in .6s 1');
+
+    &:hover {
+        height: 2.5rem;
+    }
+}

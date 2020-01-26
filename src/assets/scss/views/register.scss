@@ -1,0 +1,13 @@
+.register {
+    background: $blue;
+    background: -moz-linear-gradient($top-left, $blue, $light-blue); /* FF3.6-15 */
+    background: -webkit-linear-gradient($top-left, $blue, $light-blue); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient($top-left, $blue, $light-blue); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    min-height: 100vh;
+
+    .text {
+        font-size: .9rem;
+    }
+}

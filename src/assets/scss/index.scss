@@ -1,0 +1,16 @@
+// variables
+@import './variables.scss';
+// Bootstrap css
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// main layout
+@import './main.scss';
+@import './footer.scss';
+@import './navbar.scss';
+
+// views
+@import './views/admin.scss';
+@import './views/home.scss';
+@import './views/login.scss';
+@import './views/register.scss';
+@import './views/account.scss';

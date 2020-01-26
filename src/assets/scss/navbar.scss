@@ -1,0 +1,35 @@
+.nav-info {
+    background-color: $white;
+
+    .link {
+        color: $blue;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            color: $light-blue;
+        }
+    }
+
+    .navbar-toggler {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("../hamburger.svg");
+        background-size: 80%;
+    }
+}
+
+.activeNav{
+    visibility: visible;
+    transition: all 400ms ease-out;
+}
+
+.hiddenNav{
+    visibility: hidden;
+    transition: all 400ms ease-in;
+    transform: translate(0, -100%);
+}
