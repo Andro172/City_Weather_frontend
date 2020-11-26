@@ -42,6 +42,7 @@ class UpdateCityForm extends React.Component {
                   this.props.refresh();
                 }
               } catch (err) {
+                console.log(err)
                 if (err.response.status === 404) {
                   showCityId = true;
                 }

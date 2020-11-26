@@ -28,7 +28,7 @@ class AddCityModal extends React.Component {
    */
   refresh() {
     this.showModal(false);
-    this.props.getMyCity();
+    this.props.getMyCities();
   }
 
   render() {
@@ -65,7 +65,7 @@ class AddCityModal extends React.Component {
 }
 
 AddCityModal.propTypes = {
-  getMyCity: PropTypes.func.isRequired,
+  getMyCities: PropTypes.func.isRequired,
 };
 
 export default AddCityModal;
